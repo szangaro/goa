@@ -5,9 +5,9 @@ import (
 	"net/http"
 )
 
-// PopulateRequestContext returns a middleware which populates a number of standard HTTP reqeust
-// values into the request context. Those values may be extracted using the
-// corresponding ContextKey type in this package.
+// PopulateRequestContext returns a middleware which populates a number of
+// standard HTTP request values into the request context. Those values may be
+// extracted using the corresponding ContextKey type in this package.
 func PopulateRequestContext() func(http.Handler) http.Handler {
 	return func(h http.Handler) http.Handler {
 		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
